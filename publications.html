@@ -1,237 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <!-- Favicon code from realfavicongenerator.net -->
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#8b51a3">
-<meta name="msapplication-TileColor" content="#563d7c">
-<meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications · Gaël Aglin</title>
+  <meta name="description" content="Peer-reviewed publications by Gaël Aglin on optimal decision trees, interpretable models, and combinatorial optimization (AAAI, IJCAI, IDA, CPAIOR)." />
 
-  <!--jQuery-->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Publications · Gaël Aglin" />
+  <meta property="og:description" content="Peer-reviewed work on optimal decision trees, interpretable models, and combinatorial optimization." />
+  <meta property="og:url" content="https://aglingael.github.io/publications.html" />
+  <meta property="og:image" content="https://aglingael.github.io/assets/img/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://aglingael.github.io/assets/img/og-image.png" />
 
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/piazzai/nonacademicons/css/nonacademicons.min.css" />
-  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+  <link rel="canonical" href="https://aglingael.github.io/publications.html" />
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#fbf9f4" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/main.css">
-
-  
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J0SNXK3Q7R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J0SNXK3Q7R');
-</script>
-  
-
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Publications | Personal website</title>
-<meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Publications" />
-<meta name="author" content="Gaël Aglin" />
-<meta property="og:locale" content="en_GB" />
-<meta name="description" content="List of publications" />
-<meta property="og:description" content="List of publications" />
-<meta property="og:site_name" content="Personal website" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Publications" />
-<meta name="twitter:site" content="@aglingael" />
-<meta name="twitter:creator" content="@Gaël Aglin" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Gaël Aglin"},"description":"List of publications","headline":"Publications","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/img/smile.png"},"name":"Gaël Aglin"},"url":"/publications.html"}</script>
-<!-- End Jekyll SEO tag -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
-<!--jQuery-->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <body>
-  <div class="container">
-    
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="grid-field" aria-hidden="true"></div>
 
-<section id="header-nav">
-  <header>
-    <nav>
-      <ul>
-        
-        <a href="/">
-          <li class="btn-nav">Home</li>
-        </a>
-        <li class="current">Publications</li>
-        
-          <a href="/presentations">
-            <li class="btn-nav">Talks</li>
-          </a>
-        
-        
-        
-          <a href="/projects">
-            <li class="btn-nav">Projects</li>
-          </a>
-        
-        
-        
-        <!-- presentations -->
-        
-      </ul>
-    </nav>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Gaël Aglin, home">
+        <span class="mark">G<span>A</span></span>
+        Gaël&nbsp;Aglin
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#profile"><span class="nav-num">01</span>Profile</a>
+        <a href="/#experience"><span class="nav-num">02</span>Experience</a>
+        <a href="/#research"><span class="nav-num">03</span>Research</a>
+        <a href="/#projects"><span class="nav-num">04</span>Projects</a>
+        <a href="/#contact"><span class="nav-num">05</span>Contact</a>
+      </nav>
+    </div>
   </header>
-</section>
-<!--publications.js-->
-<script type="text/javascript" src="/assets/js/publications.js"></script>
-<div id="publications">
-  <section class="bg"></section>
-  <h1 class="title">Publications</h1>
-  <h2 class="bibliography">2022</h2>
-<ol class="bibliography"><li><!-- Entry bib key -->
-<div id="aglin2022learningbis">
-  
-  <!-- Title -->
-  <div class="title">Learning Optimal Decision Trees Under Constraints</div>
-  <!-- Author -->
-  <div class="author">
-          <em><b>Aglin, Gaël</b></em>
-  </div>
 
-  <!-- Journal/Book title and date -->
-  
-  <div class="third-line">
-    In PhD Thesis, 2022
-  </div>
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <a class="back" href="/">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 6 8 12l6 6"/></svg>
+          Back to home
+        </a>
+        <h1>Publications</h1>
+        <p>Peer-reviewed work on optimal decision trees, interpretable models, and combinatorial optimization.</p>
+      </div>
+    </section>
 
-  <!-- Links/Buttons -->
-  <div class="links">
-      [<a href="https://dial.uclouvain.be/pr/boreal/object/boreal:266164" class="btn btn-sm z-depth-0" role="button">PDF</a>]
-      [<a href="https://github.com/aia-uclouvain/pydl8.5" class="btn btn-sm z-depth-0" role="button">Code</a>]
-  </div>
+    <section class="section" style="padding-top: clamp(2.5rem, 5vw, 4rem);">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="sec-num">★</span>
+          <h2 class="sec-title">Selected papers</h2>
+          <p class="sec-note">
+            290 total citations · h-index 4.
+            <a class="link" href="https://scholar.google.com/citations?user=obMPBnEAAAAJ" target="_blank" rel="noopener">Google Scholar →</a>
+          </p>
+        </header>
 
-  
-</div></li>
-<li><!-- Entry bib key -->
-<div id="aglin2022learning">
-  
-  <!-- Title -->
-  <div class="title">Learning Optimal Decision Trees Under Memory Constraints</div>
-  <!-- Author -->
-  <div class="author">
-            <em><b>Aglin, Gaël</b></em>,&nbsp;Nijssen, Siegfried,&nbsp;and Schaus, Pierre
-  </div>
+        <div class="pub-list">
+          <article class="pub">
+            <div class="pub-venue">AAAI<span class="yr">2020</span></div>
+            <div class="pub-main">
+              <h3>Learning Optimal Decision Trees Using Caching Branch-and-Bound Search</h3>
+              <p class="authors"><b>Aglin G.</b>, Nijssen S., Schaus P.</p>
+              <p class="note">Proceedings of the AAAI Conference on Artificial Intelligence. Presented at AAAI, New York.</p>
+            </div>
+            <div class="pub-cite"><b>218</b> cites</div>
+          </article>
 
-  <!-- Journal/Book title and date -->
-  
-  <div class="third-line">
-    In European Conference on Machine Learning and Knowledge Discovery in Databases, pp. 599–616, 2022
-  </div>
+          <article class="pub">
+            <div class="pub-venue">IJCAI<span class="yr">2021</span></div>
+            <div class="pub-main">
+              <h3>PyDL8.5: A Library for Learning Optimal Decision Trees</h3>
+              <p class="authors"><b>Aglin G.</b>, Nijssen S., Schaus P.</p>
+              <p class="note">International Joint Conference on Artificial Intelligence (demo / system track).</p>
+            </div>
+            <div class="pub-cite"><b>49</b> cites</div>
+          </article>
 
-  <!-- Links/Buttons -->
-  <div class="links">
-      [<a href="https://2022.ecmlpkdd.org/wp-content/uploads/2022/09/sub_1200.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>]
-      [<a href="https://github.com/aia-uclouvain/pydl8.5" class="btn btn-sm z-depth-0" role="button">Code</a>]
-  </div>
+          <article class="pub">
+            <div class="pub-venue">IDA<span class="yr">2024</span></div>
+            <div class="pub-main">
+              <h3>Interpretable Quantile Regression by Optimal Decision Trees</h3>
+              <p class="authors">Lemaire V., <b>Aglin G.</b>, Nijssen S.</p>
+              <p class="note">International Symposium on Intelligent Data Analysis.</p>
+            </div>
+            <div class="pub-cite"></div>
+          </article>
 
-  
-</div></li></ol>
-<h2 class="bibliography">2021</h2>
-<ol class="bibliography"><li><!-- Entry bib key -->
-<div id="aglin2021assessing">
-  
-  <!-- Title -->
-  <div class="title">Assessing Optimal Forests of Decision Trees</div>
-  <!-- Author -->
-  <div class="author">
-            <em><b>Aglin, Gaël</b></em>,&nbsp;Nijssen, Siegfried,&nbsp;and Schaus, Pierre
-  </div>
+          <article class="pub">
+            <div class="pub-venue">CPAIOR<span class="yr">2024</span></div>
+            <div class="pub-main">
+              <h3>An Efficient Structured Perceptron for NP-Hard Combinatorial Optimization Problems</h3>
+              <p class="authors">Véjar B., <b>Aglin G.</b>, et al.</p>
+              <p class="note">Integration of Constraint Programming, AI and OR. Industrial collaboration with PSI Metals on steel-sheet production scheduling.</p>
+            </div>
+            <div class="pub-cite"></div>
+          </article>
+        </div>
 
-  <!-- Journal/Book title and date -->
-  
-  <div class="third-line">
-    In 2021 IEEE 33rd International Conference on Tools with Artificial Intelligence (ICTAI), pp. 32–39, 2021
-  </div>
+        <p style="margin-top: 2.5rem; color: var(--ink-soft); font-size: var(--fs-sm); max-width: 60ch;">
+          Additional work has appeared in ECML PKDD and ICTAI. For the complete and most
+          up-to-date list, see
+          <a class="link" href="https://scholar.google.com/citations?user=obMPBnEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          or <a class="link" href="https://orcid.org/0000-0002-6760-4752" target="_blank" rel="noopener">ORCID</a>.
+        </p>
+      </div>
+    </section>
+  </main>
 
-  <!-- Links/Buttons -->
-  <div class="links">
-      [<a href="https://ieeexplore.ieee.org/abstract/document/9643234" class="btn btn-sm z-depth-0" role="button">PDF</a>]
-      [<a href="https://github.com/aia-uclouvain/pydl8.5" class="btn btn-sm z-depth-0" role="button">Code</a>]
-  </div>
+  <footer class="site-foot" id="contact">
+    <div class="wrap">
+      <div class="foot-grid">
+        <p class="foot-cta">
+          Let's talk about hard<br />decision problems.<br />
+          <a href="mailto:aglingael@gmail.com">aglingael@gmail.com</a>
+        </p>
+        <nav class="foot-links" aria-label="Contact and profiles">
+          <a href="mailto:aglingael@gmail.com">Email<span class="handle">aglingael@gmail.com</span></a>
+          <a href="https://www.linkedin.com/in/aglingael/" target="_blank" rel="noopener">LinkedIn<span class="handle">/in/aglingael</span></a>
+          <a href="https://github.com/aglingael" target="_blank" rel="noopener">GitHub<span class="handle">@aglingael</span></a>
+          <a href="https://scholar.google.com/citations?user=obMPBnEAAAAJ" target="_blank" rel="noopener">Google Scholar<span class="handle">290 citations</span></a>
+          <a href="https://orcid.org/0000-0002-6760-4752" target="_blank" rel="noopener">ORCID<span class="handle">0000-0002-6760-4752</span></a>
+        </nav>
+      </div>
+      <div class="foot-base">
+        <span>© <span data-year>2026</span> Gaël Aglin</span>
+        <span>Brussels, Belgium</span>
+        <span>Production ML · Decision Science · GenAI</span>
+      </div>
+    </div>
+  </footer>
 
-  
-</div></li>
-<li><!-- Entry bib key -->
-<div id="aglin2021pydl8">
-  
-  <!-- Title -->
-  <div class="title">PyDL8.5: A Library for Learning Optimal Decision Trees</div>
-  <!-- Author -->
-  <div class="author">
-            <em><b>Aglin, Gaël</b></em>,&nbsp;Nijssen, Siegfried,&nbsp;and Schaus, Pierre
-  </div>
-
-  <!-- Journal/Book title and date -->
-  
-  <div class="third-line">
-    In Proceedings of the Twenty-Ninth International Conference on International Joint Conferences on Artificial Intelligence, pp. 5222–5224, 2021
-  </div>
-
-  <!-- Links/Buttons -->
-  <div class="links">
-      [<a href="https://www.ijcai.org/proceedings/2020/0750.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>]
-      [<a href="https://github.com/aia-uclouvain/pydl8.5" class="btn btn-sm z-depth-0" role="button">Code</a>]
-  </div>
-
-  
-</div></li></ol>
-<h2 class="bibliography">2020</h2>
-<ol class="bibliography"><li><!-- Entry bib key -->
-<div id="aglin2020learning">
-  
-  <!-- Title -->
-  <div class="title">Learning Optimal Decision Trees Using Caching Branch-and-Bound Search</div>
-  <!-- Author -->
-  <div class="author">
-            <em><b>Aglin, Gaël</b></em>,&nbsp;Nijssen, Siegfried,&nbsp;and Schaus, Pierre
-  </div>
-
-  <!-- Journal/Book title and date -->
-  
-  <div class="third-line">
-    In Proceedings of the AAAI Conference on Artificial Intelligence, vol. 34, pp. 3146–3153, 2020
-  </div>
-
-  <!-- Links/Buttons -->
-  <div class="links">
-      [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/5711" class="btn btn-sm z-depth-0" role="button">PDF</a>]
-      [<a href="https://github.com/aia-uclouvain/pydl8.5" class="btn btn-sm z-depth-0" role="button">Code</a>]
-  </div>
-
-  
-</div></li></ol>
-</div>
-
-<!-- Footer -->
-<footer>
-  <div class="footer">
-    Copyright © 2023
-    <!-- <a href=""></a>.
-    Powered by Jekyll with
-    <a href="https://github.com/chrjabs/Grape-Academic-Theme">Grape Academic Theme</a>. -->
-  </div>
-</footer>
-
-  </div>
+  <script src="/app.js" defer></script>
 </body>
-
 </html>

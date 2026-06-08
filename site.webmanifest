@@ -1,19 +1,13 @@
 {
-    "name": "Grape Academic Theme",
-    "short_name": "Grape Academic Theme",
-    "icons": [
-        {
-            "src": "/assets/img/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/assets/img/android-chrome-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+  "name": "Gaël Aglin",
+  "short_name": "Gaël Aglin",
+  "description": "Senior Data Scientist — production ML, decision science, GenAI.",
+  "icons": [
+    { "src": "/assets/img/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/img/android-chrome-384x384.png", "sizes": "384x384", "type": "image/png" }
+  ],
+  "theme_color": "#fcfaf6",
+  "background_color": "#fcfaf6",
+  "display": "standalone",
+  "start_url": "/"
 }
