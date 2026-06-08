@@ -1,420 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <!-- Favicon code from realfavicongenerator.net -->
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#8b51a3">
-<meta name="msapplication-TileColor" content="#563d7c">
-<meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gaël Aglin · Senior Data Scientist · Production ML, Decision Science, GenAI</title>
+  <meta name="description" content="Gaël Aglin, Ph.D., Senior Data Scientist building production decision systems that combine machine learning, causal experimentation, and combinatorial optimization. Author of widely cited research on optimal decision trees (AAAI 2020) and maintainer of PyDL8.5." />
+  <meta name="author" content="Gaël Aglin" />
 
-  <!--jQuery-->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gaël Aglin · Senior Data Scientist" />
+  <meta property="og:description" content="Production decision systems: machine learning, causal inference, and combinatorial optimization. Ph.D., AAAI 2020, PyDL8.5." />
+  <meta property="og:url" content="https://aglingael.github.io/" />
+  <meta property="og:image" content="https://aglingael.github.io/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Gaël Aglin, Senior Data Scientist. Production ML, Decision Science, GenAI." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://aglingael.github.io/assets/img/og-image.png" />
 
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/piazzai/nonacademicons/css/nonacademicons.min.css" />
-  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+  <link rel="canonical" href="https://aglingael.github.io/" />
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#fbf9f4" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
 
-  
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J0SNXK3Q7R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J0SNXK3Q7R');
-</script>
-  
-
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About me | Personal website</title>
-<meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="About me" />
-<meta name="author" content="Gaël Aglin" />
-<meta property="og:locale" content="en_GB" />
-<meta name="description" content="Personal Website" />
-<meta property="og:description" content="Personal Website" />
-<meta property="og:site_name" content="Personal website" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About me" />
-<meta name="twitter:site" content="@aglingael" />
-<meta name="twitter:creator" content="@Gaël Aglin" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Gaël Aglin"},"description":"Personal Website","headline":"About me","name":"Gaël Aglin","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/img/smile.png"},"name":"Gaël Aglin"},"sameAs":["https://twitter.com/aglingael","https://github.com/aglingael","https://linkedin.com/aglingael"],"url":"/"}</script>
-<!-- End Jekyll SEO tag -->
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gaël Aglin",
+    "honorificSuffix": "Ph.D.",
+    "jobTitle": "Senior Data Scientist",
+    "url": "https://aglingael.github.io/",
+    "email": "mailto:aglingael@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Brussels", "addressCountry": "BE" },
+    "sameAs": [
+      "https://www.linkedin.com/in/aglingael/",
+      "https://github.com/aglingael",
+      "https://scholar.google.com/citations?user=obMPBnEAAAAJ",
+      "https://orcid.org/0000-0002-6760-4752"
+    ]
+  }
+  </script>
 </head>
-<!--jQuery-->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <body>
-  <div class="container">
-    
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="grid-field" aria-hidden="true"></div>
 
-<section id="header-nav">
-  <header>
-    <nav>
-      <ul>
-        
-        <li class="current">Home</li>
-        
-          <a href="/publications">
-            <li class="btn-nav">Publications</li>
-          </a>
-        
-        
-          <a href="/presentations">
-            <li class="btn-nav">Talks</li>
-          </a>
-        
-        
-        
-          <a href="/projects">
-            <li class="btn-nav">Projects</li>
-          </a>
-        
-        
-        
-        <!-- publications -->
-        
-      </ul>
-    </nav>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Gaël Aglin, home">
+        <span class="mark">G<span>A</span></span>
+        Gaël&nbsp;Aglin
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#profile"><span class="nav-num">01</span>Profile</a>
+        <a href="#experience"><span class="nav-num">02</span>Experience</a>
+        <a href="#research"><span class="nav-num">03</span>Research</a>
+        <a href="#projects"><span class="nav-num">04</span>Projects</a>
+        <a href="#contact"><span class="nav-num">05</span>Contact</a>
+      </nav>
+    </div>
   </header>
-</section>
 
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-text">
+          <span class="hero-eyebrow" data-reveal><span class="dot"></span>Senior Data Scientist · Ph.D.</span>
+          <h1 data-reveal>Gaël<br />Aglin<span class="ph">.</span></h1>
+          <p class="hero-role" data-reveal>Production ML · Decision Science · GenAI</p>
+          <p class="hero-lead" data-reveal>
+            I build <strong>production decision systems</strong> that combine machine learning,
+            causal experimentation, and combinatorial optimization, backed by measured impact
+            and widely cited research.
+          </p>
+          <div class="hero-actions" data-reveal>
+            <a class="btn" href="mailto:aglingael@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              Get in touch
+            </a>
+            <a class="btn btn--ghost" href="https://scholar.google.com/citations?user=obMPBnEAAAAJ" target="_blank" rel="noopener">
+              Google Scholar
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="https://github.com/aglingael" target="_blank" rel="noopener">
+              GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+          <div class="hero-meta" data-reveal>
+            <span><span class="k">↳</span> Brussels, Belgium</span>
+            <span><span class="k">↳</span> Open to relocate</span>
+            <span><span class="k">↳</span> 8+ years</span>
+          </div>
+        </div>
 
-
-
-</div><!-- This Tag means End .container -->
-<div id="portfolio">
-  <section id="about-me">
-    <div class="row">
-      <div class="img-wrap col-12 col-md-4">
-        <div class="img">
-          <img src="/assets/img/smile.png" alt="user_image">
+        <div class="hero-figure" data-reveal>
+          <figure class="tree-frame">
+            <div class="tree" aria-hidden="true">
+              <svg viewBox="0 0 480 400" role="img">
+                <!-- edges -->
+                <path class="edge" d="M240,48 L122,176" />
+                <path class="edge opt" d="M240,48 L358,176" />
+                <path class="edge" d="M122,176 L56,312" />
+                <path class="edge" d="M122,176 L190,312" />
+                <path class="edge" d="M358,176 L290,312" />
+                <path class="edge opt" d="M358,176 L424,312" />
+                <!-- edge labels -->
+                <text class="elabel" x="174" y="116" text-anchor="end">false</text>
+                <text class="elabel" x="308" y="116" text-anchor="start">true</text>
+                <!-- split nodes -->
+                <rect class="node-split" x="231" y="39" width="18" height="18" rx="4" />
+                <rect class="node-split" x="113" y="167" width="18" height="18" rx="4" />
+                <rect class="node-split opt" x="349" y="167" width="18" height="18" rx="4" />
+                <!-- leaf nodes -->
+                <circle class="node-leaf" cx="56" cy="312" r="6" />
+                <circle class="node-leaf" cx="190" cy="312" r="6" />
+                <circle class="node-leaf" cx="290" cy="312" r="6" />
+                <circle class="node-leaf opt" cx="424" cy="312" r="7.5" />
+                <!-- node labels -->
+                <text class="nlabel" x="240" y="28" text-anchor="middle">x₁ ≤ θ₁</text>
+                <text class="nlabel" x="103" y="173" text-anchor="end">x₂ ≤ θ₂</text>
+                <text class="nlabel opt" x="377" y="173" text-anchor="start">x₃ ≤ θ₃</text>
+                <text class="nlabel opt" x="424" y="338" text-anchor="middle">optimal</text>
+              </svg>
+            </div>
+            <figcaption class="tree-caption">
+              An optimal decision tree. The <b>accent path</b> is the proven-optimal route from
+              root to leaf, the core idea behind DL8.5 (AAAI 2020).
+            </figcaption>
+          </figure>
         </div>
       </div>
-      <div class="text-wrap col-12 col-md-8">
-        <h2 class="username">Gaël Aglin</h2>
-        <div style="text-align: justify;text-justify: inter-word;" class="description"><p>I am a postdoctoral fellow in Artificial Intelligence and Algorithms (AIA) research group at UCLouvain. I held a PhD from UCLouvain in 2022. My main research focuses on Machine Learning and Combinatorial Optimization. Broadly, I am passionate about programming and artificial intelligence; specifically creating machine learning models or applying deep learning algorithms on exciting projects. I am also interested in solving combinatorial optimization problems using algorithmic techniques and tailored data structures. I like to discover and analyze new problems. My updated CV can be downloaded <a href="https://drive.google.com/file/d/1XoXV4YhQt4UiQ0ryewc9DsyTyzgIYPoL/view?usp=sharing">here</a>.</p>
-</div>
+    </section>
 
-        <ul id="icons">
-          
+    <!-- ===================== 01 · SELECTED RECORD ===================== -->
+    <section class="section" id="record">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-num">01</span>
+          <h2 class="sec-title">Selected record</h2>
+          <p class="sec-note">Public, verifiable figures. Research and open-source metrics, competition results.</p>
+        </header>
 
-<li>
-  <a href="mailto:%61%67%6C%69%6E%67%61%65%6C@%67%6D%61%69%6C.%63%6F%6D" target="_blank" title="Email">
-    <i class="fas fa-envelope"></i>
-  </a>
-</li>
+        <div class="ledger">
+          <div class="ledger-row" data-reveal>
+            <div class="ledger-fig">218</div>
+            <div class="ledger-body">
+              <h3>Citations, AAAI 2020</h3>
+              <p>“Learning Optimal Decision Trees Using Caching Branch-and-Bound Search.” Presented at AAAI, New York.</p>
+            </div>
+          </div>
+          <div class="ledger-row" data-reveal>
+            <div class="ledger-fig">290 <span class="u">/ h-index 4</span></div>
+            <div class="ledger-body">
+              <h3>Total citations</h3>
+              <p>Across AAAI, IJCAI, ECML PKDD, IDA, and CPAIOR. Tracked on Google Scholar.</p>
+            </div>
+          </div>
+          <div class="ledger-row" data-reveal>
+            <div class="ledger-fig">21 <span class="u">releases</span></div>
+            <div class="ledger-body">
+              <h3>PyDL8.5, open source</h3>
+              <p>scikit-learn-compatible C++/Cython/Python library on PyPI. 600+ commits, CI on Linux, macOS and Windows.</p>
+            </div>
+          </div>
+          <div class="ledger-row" data-reveal>
+            <div class="ledger-fig">1<span class="u">st</span></div>
+            <div class="ledger-body">
+              <h3>BNP Paribas Group RAG Hackathon 2024</h3>
+              <p>First place in a multi-team Retrieval-Augmented Generation competition across 12 country offices.</p>
+            </div>
+          </div>
+          <div class="ledger-row" data-reveal>
+            <div class="ledger-fig">1<span class="u">st</span></div>
+            <div class="ledger-body">
+              <h3>Proximus Kaggle Competition 2023</h3>
+              <p>First place. Object detection / image classification on industrial fiber imagery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===================== 02 · PROFILE ===================== -->
+    <section class="section" id="profile">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-num">02</span>
+          <h2 class="sec-title">Profile</h2>
+        </header>
 
+        <div class="about-grid">
+          <div data-reveal>
+            <p class="about-lead">
+              Eight years turning hard decision problems into systems that <em>ship</em>, where
+              machine learning meets causal inference and combinatorial optimization.
+            </p>
+            <div class="about-body" style="margin-top: 1.75rem;">
+              <p>
+                I'm a Senior Applied Data Scientist with a Ph.D., working across predictive ML,
+                causal experimentation, and constrained optimization. At BNP Paribas Fortis I own
+                end-to-end production decision systems for the pricing business line, from
+                price-elasticity and risk-cost modeling to constrained optimization, validated
+                through A/B testing before rollout.
+              </p>
+              <p>
+                My research on optimal decision trees (DL8.5) was published at AAAI 2020 and is
+                widely cited, and I maintain the open-source PyDL8.5 library. I've led industrial
+                collaborations on steel-sheet production scheduling (PSI Metals) and inventory
+                forecasting (H&amp;M Sweden), and I serve on my bank's AI Model Validation Committee.
+              </p>
+            </div>
+          </div>
 
-<li>
-  <a href="https://orcid.org/0000-0002-6760-4752" target="_blank" title="ORCID">
-    <i class="ai ai-orcid"></i>
-  </a>
-</li>
+          <aside class="about-side" data-reveal>
+            <div class="blk">
+              <h4>Currently</h4>
+              <p class="big">Senior Data Scientist</p>
+              <p>BNP Paribas Fortis, Brussels</p>
+            </div>
+            <div class="blk">
+              <h4>Based in</h4>
+              <p class="big">Brussels, Belgium</p>
+              <p>Open to relocate</p>
+            </div>
+            <div class="blk">
+              <h4>Focus</h4>
+              <p>Production decision systems · causal inference · combinatorial optimization · production RAG &amp; LLM systems</p>
+            </div>
+            <div class="blk">
+              <h4>Languages</h4>
+              <p>French (native) · English (full professional)</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===================== 03 · EXPERIENCE ===================== -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-num">03</span>
+          <h2 class="sec-title">Experience</h2>
+          <p class="sec-note">Industry and applied research, in parallel for most of the last decade.</p>
+        </header>
 
+        <p class="xp-cluster-label">Industry</p>
+        <div class="ledger">
+          <article class="ledger-row xp-row" data-reveal>
+            <div class="xp-year"><span class="now">2023 – now</span></div>
+            <div>
+              <h3 class="xp-role">Senior Data Scientist
+                <span class="xp-org">BNP Paribas Fortis <span class="place">· Brussels, Belgium</span></span>
+              </h3>
+              <ul class="xp-points">
+                <li>Own end-to-end production decision systems spanning predictive ML, causal experimentation, and constrained optimization for the <b>pricing business line</b> (retail / private / corporate banking); drive cross-functional execution with risk, finance, IT, product and Responsible AI under GDPR and the EU AI Act.</li>
+                <li>Designed and shipped a production <b>dynamic-pricing framework</b> combining price-elasticity / uplift modeling, probability-of-default and risk-cost prediction, and constrained non-linear optimization, validated through A/B testing, with significant measured business impact.</li>
+                <li>Run production model monitoring (performance, drift, business KPIs); when drift appears between A/B groups, isolate the true causal effect via post-randomization bias correction and causal inference (matching, difference-in-differences).</li>
+                <li>Architected and productionized an <b>intelligent document-processing</b> system using Retrieval-Augmented Generation for credit-acquisition workflows, with evaluation strategies and guardrails for LLM outputs.</li>
+                <li>Member of the bank's <b>AI Model Validation Committee</b>: model-governance contributor and technical reviewer, from use-case framing through pre-production sign-off.</li>
+              </ul>
+              <div class="xp-tags">
+                <span class="tag">Causal inference</span>
+                <span class="tag">Uplift modeling</span>
+                <span class="tag">Constrained optimization</span>
+                <span class="tag">Production RAG</span>
+                <span class="tag">A/B testing</span>
+              </div>
+            </div>
+          </article>
 
-<li>
-  <a href="https://scholar.google.com/citations?user=obMPBnEAAAAJ" target="_blank" title="Google Scholar">
-    <i class="ai ai-google-scholar"></i>
-  </a>
-</li>
+          <article class="ledger-row xp-row" data-reveal>
+            <div class="xp-year">2018 – 2020</div>
+            <div>
+              <h3 class="xp-role">Data Scientist Consultant
+                <span class="xp-org">bpost <span class="place">· Belgium · part-time, alongside Ph.D.</span></span>
+              </h3>
+              <ul class="xp-points">
+                <li>Built <b>NLP-based document classification</b> for automated postal document processing (structured PDFs, scanned forms, document images).</li>
+                <li>Delivered geospatial and spatio-temporal analytics on postal logistics (flows, routes, volumes) with GeoPandas to support operational decisions.</li>
+              </ul>
+            </div>
+          </article>
 
+          <article class="ledger-row xp-row" data-reveal>
+            <div class="xp-year">2016 – 2017</div>
+            <div>
+              <h3 class="xp-role">Android Developer
+                <span class="xp-org">HE Systems <span class="place">· Cotonou, Benin</span></span>
+              </h3>
+              <ul class="xp-points">
+                <li>Built and shipped an <b>e-commerce Android application</b> end-to-end, early production-system experience.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
 
+        <p class="xp-cluster-label" style="margin-top: 2.75rem;">Research</p>
+        <div class="ledger">
+          <article class="ledger-row xp-row" data-reveal>
+            <div class="xp-year">2022 – 2023</div>
+            <div>
+              <h3 class="xp-role">Postdoctoral Researcher, ML &amp; Combinatorial Optimization
+                <span class="xp-org">UCLouvain <span class="place">· Belgium</span></span>
+              </h3>
+              <ul class="xp-points">
+                <li>Led a one-year industrial collaboration with <b>PSI Metals</b> (Brussels): replaced a genetic-algorithm baseline in their steel-sheet production-scheduling engine with a <b>Structured Perceptron</b> preserving sequence-structure constraints; published at CPAIOR 2024.</li>
+                <li>Developed ML-enhanced optimization frameworks for decision-making under preferences; supervised Master's theses and mentored students.</li>
+              </ul>
+            </div>
+          </article>
 
-<li>
-  <a href="https://www.webofscience.com/wos/author/record/HCI-4632-2022/" target="_blank" title="Web of Science">
-    <i class="nai nai-clarivate"></i>
-  </a>
-</li>
+          <article class="ledger-row xp-row" data-reveal>
+            <div class="xp-year">2018 – 2022</div>
+            <div>
+              <h3 class="xp-role">Ph.D. Researcher, ML &amp; Combinatorial Optimization
+                <span class="xp-org">UCLouvain <span class="place">· Louvain-la-Neuve, Belgium</span></span>
+              </h3>
+              <ul class="xp-points">
+                <li>Advisors: Prof. Siegfried Nijssen, Prof. Pierre Schaus. Designed exact algorithms for <b>optimal decision trees (DL8.5)</b>, outperforming prior MIP approaches by orders of magnitude (AAAI 2020).</li>
+                <li>Led an industrial collaboration with <b>H&amp;M Sweden</b>: adapted optimal decision trees into quantile regression trees for inventory min/max forecasting on Databricks.</li>
+                <li>Released and maintained PyDL8.5 (scikit-learn-compatible, PyPI). Teaching assistant in Python programming, databases, AI, and algorithm complexity.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===================== 04 · RESEARCH ===================== -->
+    <section class="section" id="research">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-num">04</span>
+          <h2 class="sec-title">Research &amp; publications</h2>
+          <p class="sec-note">
+            Selected peer-reviewed work. <a class="link" href="/publications.html">All publications →</a>
+          </p>
+        </header>
 
+        <div class="pub-list">
+          <article class="pub" data-reveal>
+            <div class="pub-venue">AAAI<span class="yr">2020</span></div>
+            <div class="pub-main">
+              <h3>Learning Optimal Decision Trees Using Caching Branch-and-Bound Search</h3>
+              <p class="authors"><b>Aglin G.</b>, Nijssen S., Schaus P.</p>
+              <p class="note">Presented at AAAI, New York.</p>
+            </div>
+            <div class="pub-cite"><b>218</b> cites</div>
+          </article>
 
+          <article class="pub" data-reveal>
+            <div class="pub-venue">IJCAI<span class="yr">2021</span></div>
+            <div class="pub-main">
+              <h3>PyDL8.5: A Library for Learning Optimal Decision Trees</h3>
+              <p class="authors"><b>Aglin G.</b>, Nijssen S., Schaus P.</p>
+            </div>
+            <div class="pub-cite"><b>49</b> cites</div>
+          </article>
 
+          <article class="pub" data-reveal>
+            <div class="pub-venue">IDA<span class="yr">2024</span></div>
+            <div class="pub-main">
+              <h3>Interpretable Quantile Regression by Optimal Decision Trees</h3>
+              <p class="authors">Lemaire V., <b>Aglin G.</b>, Nijssen S.</p>
+            </div>
+            <div class="pub-cite"></div>
+          </article>
 
-<li>
-  <a href="https://dblp.org/pid/266/4663.html/" target="_blank" title="DBLP">
-    <i class="ai ai-dblp"></i>
-  </a>
-</li>
+          <article class="pub" data-reveal>
+            <div class="pub-venue">CPAIOR<span class="yr">2024</span></div>
+            <div class="pub-main">
+              <h3>An Efficient Structured Perceptron for NP-Hard Combinatorial Optimization Problems</h3>
+              <p class="authors">Véjar B., <b>Aglin G.</b>, et al.</p>
+              <p class="note">Industrial collaboration with PSI Metals on steel-sheet production scheduling.</p>
+            </div>
+            <div class="pub-cite"></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===================== 05 · PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-num">05</span>
+          <h2 class="sec-title">Selected projects</h2>
+        </header>
 
+        <div class="projects">
+          <article class="project" data-reveal>
+            <div class="project-top">
+              <span class="project-kicker">Open source · 2019 – now</span>
+            </div>
+            <h3>PyDL8.5</h3>
+            <p>Library for inferring optimal decision trees, scikit-learn-compatible. C++ core (~74%), Cython bindings, Python wrapper. Published on PyPI, documented on ReadTheDocs, CI across Linux, macOS and Windows.</p>
+            <div class="xp-tags">
+              <span class="tag">C++</span><span class="tag">Cython</span><span class="tag">scikit-learn</span><span class="tag">PyPI</span>
+            </div>
+            <a class="project-link" href="https://github.com/aia-uclouvain/pydl8.5" target="_blank" rel="noopener">
+              github.com/aia-uclouvain/pydl8.5
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
 
+          <article class="project" data-reveal>
+            <div class="project-top">
+              <span class="project-kicker">Solo B2B SaaS · 2024 – now</span>
+            </div>
+            <h3>rendoc.africa</h3>
+            <p>End-to-end B2B SaaS platform (pre-production). Next.js full-stack, PostgreSQL + Redis + S3-class storage, deployed on Railway behind nginx on a Hetzner VPS. Embedded ML: face detection + matching for ID verification (KYC), topic modeling and sentiment on reviews. Brevo email and WhatsApp Business via Twilio.</p>
+            <div class="xp-tags">
+              <span class="tag">Next.js</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">ML / KYC</span>
+            </div>
+            <a class="project-link" href="https://rendoc.africa" target="_blank" rel="noopener">
+              rendoc.africa
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
 
+          <article class="project" data-reveal>
+            <div class="project-top">
+              <span class="project-kicker">1st place · 2023</span>
+            </div>
+            <h3>Proximus Kaggle</h3>
+            <p>First place in the Proximus object-detection / image-classification competition on industrial fiber imagery.</p>
+            <div class="xp-tags">
+              <span class="tag">CNN</span><span class="tag">Object detection</span><span class="tag">Computer vision</span>
+            </div>
+            <a class="project-link" href="https://github.com/aglingael/proximus-object-detection" target="_blank" rel="noopener">
+              github.com/aglingael/proximus-object-detection
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<li>
-  <a href="https://www.linkedin.com/in/aglingael/" target="_blank" title="Linkedin">
-    <i class="fab fa-linkedin"></i>
-  </a>
-</li>
+    <!-- ===================== 06 · SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-num">06</span>
+          <h2 class="sec-title">Capabilities</h2>
+        </header>
 
+        <div class="skills">
+          <div class="skill-grp" data-reveal>
+            <h3>ML, Causal &amp; Optimization</h3>
+            <div class="items">
+              <span class="tag">A/B testing</span><span class="tag">Uplift modeling</span><span class="tag">Difference-in-differences</span><span class="tag">Matching</span><span class="tag">Bias correction</span><span class="tag">Drift detection</span><span class="tag">Quantile forecasting</span><span class="tag">Price-elasticity</span><span class="tag">Constraint programming</span><span class="tag">Branch-and-bound</span><span class="tag">MIP · Gurobi · CPLEX</span><span class="tag">Structured Perceptron</span>
+            </div>
+          </div>
+          <div class="skill-grp" data-reveal>
+            <h3>GenAI / LLMs</h3>
+            <div class="items">
+              <span class="tag">Production RAG</span><span class="tag">Intelligent document processing</span><span class="tag">LangChain</span><span class="tag">Prompt engineering</span><span class="tag">Agent / tool orchestration</span><span class="tag">Eval &amp; guardrails</span>
+            </div>
+          </div>
+          <div class="skill-grp" data-reveal>
+            <h3>Programming &amp; Cloud</h3>
+            <div class="items">
+              <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">C++</span><span class="tag">R</span><span class="tag">Java</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">scikit-learn</span><span class="tag">Pandas · NumPy</span><span class="tag">Cython</span><span class="tag">Databricks</span><span class="tag">PostgreSQL · Redis</span><span class="tag">AWS (S3, SageMaker, Bedrock)</span>
+            </div>
+          </div>
+          <div class="skill-grp" data-reveal>
+            <h3>Engineering practice</h3>
+            <div class="items">
+              <span class="tag">CI/CD · GitHub Actions</span><span class="tag">pre-commit · ruff</span><span class="tag">Code review</span><span class="tag">Model cards</span><span class="tag">Production monitoring</span><span class="tag">nginx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===================== 07 · EDUCATION ===================== -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-num">07</span>
+          <h2 class="sec-title">Education</h2>
+        </header>
 
-<li>
-  <a href="https://github.com/aglingael" target="_blank" title="Github">
-    <i class="fab fa-github"></i>
-  </a>
-</li>
+        <div class="ledger">
+          <article class="ledger-row xp-row edu-row" data-reveal>
+            <div class="xp-year">2018 – 2022</div>
+            <div>
+              <h3 class="xp-role">Ph.D., Engineering Sciences (Computer Science)
+                <span class="xp-org">UCLouvain <span class="place">· Louvain-la-Neuve, Belgium</span></span>
+              </h3>
+              <ul class="xp-points">
+                <li>Artificial Intelligence &amp; Combinatorial Optimization. Thesis: <b>Optimal Decision Trees Under Constraints</b>.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="ledger-row xp-row edu-row" data-reveal>
+            <div class="xp-year">2014 – 2016</div>
+            <div>
+              <h3 class="xp-role">M.Sc., Information Systems &amp; Computer Networks
+                <span class="xp-org">IFRI <span class="place">· Cotonou, Benin</span></span>
+              </h3>
+              <ul class="xp-points">
+                <li>Graduated with Distinction.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-
-<li>
-  <a href="https://gitlab.com/aglingael" target="_blank" title="Gitlab">
-    <i class="fab fa-gitlab"></i>
-  </a>
-</li>
-
-
-
-<li>
-  <a href="https://bitbucket.org/aglingael" target="_blank" title="Bitbucket">
-    <i class="fab fa-bitbucket"></i>
-  </a>
-</li>
-
-
-
-
-
-
-
-<li>
-  <a href="https://twitter.com/aglingael" target="_blank" title="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-</li>
-
-
-
-
-
-<li>
-  <a href="https://www.facebook.com/100017245698145" target="_blank" title="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-</li>
-
-
-
-        </ul>
+  <!-- ===================== CONTACT / FOOTER ===================== -->
+  <footer class="site-foot" id="contact">
+    <div class="wrap">
+      <div class="foot-grid">
+        <p class="foot-cta" data-reveal>
+          Let's talk about hard<br />decision problems.<br />
+          <a href="mailto:aglingael@gmail.com">aglingael@gmail.com</a>
+        </p>
+        <nav class="foot-links" aria-label="Contact and profiles" data-reveal>
+          <a href="mailto:aglingael@gmail.com">Email<span class="handle">aglingael@gmail.com</span></a>
+          <a href="https://www.linkedin.com/in/aglingael/" target="_blank" rel="noopener">LinkedIn<span class="handle">/in/aglingael</span></a>
+          <a href="https://github.com/aglingael" target="_blank" rel="noopener">GitHub<span class="handle">@aglingael</span></a>
+          <a href="https://scholar.google.com/citations?user=obMPBnEAAAAJ" target="_blank" rel="noopener">Google Scholar<span class="handle">290 citations</span></a>
+          <a href="https://orcid.org/0000-0002-6760-4752" target="_blank" rel="noopener">ORCID<span class="handle">0000-0002-6760-4752</span></a>
+        </nav>
+      </div>
+      <div class="foot-base">
+        <span>© <span data-year>2026</span> Gaël Aglin</span>
+        <span>Brussels, Belgium</span>
+        <span>Production ML · Decision Science · GenAI</span>
       </div>
     </div>
-    <div class="bg"></div>
-  </section>
-  <!-- career section -->
-  <section id="career" class="row">
-    <article class="exper col-12 col-md-6">
-      
-  <p class="title">EXPERIENCE</p>
-  <ul class="exper-list">
-    
-    <li class="meta">
-      <p class="date">2022-10 &ndash; Now</p>
-      <p class="description">Postdoc, UCLouvain</p>
-    </li>
-    
-    <li class="meta">
-      <p class="date">2018-01 &ndash; 2020-06</p>
-      <p class="description">Data Analyst, bpost (part time)</p>
-    </li>
-    
-    <li class="meta">
-      <p class="date">2018-01 &ndash; Now</p>
-      <p class="description">Teaching assistant, UCLouvain</p>
-    </li>
-    
-  </ul>
+  </footer>
 
-      
-  <p class="title">EDUCATION</p>
-  <ul class="exper-list">
-    
-    <li class="meta">
-      <p class="date">2018-01 &ndash; 2022-10</p>
-      <p class="description" style="line-height: 1.5;">PhD in Engineering Sciences and Technologies, UCLouvain</p>
-    </li>
-    
-    <li class="meta">
-      <p class="date">2014-10 &ndash; 2016-09</p>
-      <p class="description" style="line-height: 1.5;">Master in Information Systems and Computer Networks, UAC</p>
-    </li>
-    
-    <li class="meta">
-      <p class="date">2011-10 &ndash; 2013-09</p>
-      <p class="description" style="line-height: 1.5;">Bachelor in Electrical and Computer Engineering, UAC</p>
-    </li>
-    
-  </ul>
-
-      
-  <p class="title">AWARDS</p>
-  <ul class="awards-list">
-    
-    <li class="award">1st Place at national selection phase for International Collegiate Programming Contest (ICPC), Benin, 2016.</li>
-    
-  </ul>
-
-    </article>
-    <article class="skills col-12 col-md-6">
-      
-  <p class="title">RESEARCH INTERESTS</p>
-  <ul class="interests-list">
-    
-    <li class="interest">Combinatorial optimization</li>
-    
-    <li class="interest">Algorithms</li>
-    
-    <li class="interest">Machine Learning</li>
-    
-    <li class="interest">Data Mining</li>
-    
-    <li class="interest">Explainable AI</li>
-    
-    <li class="interest">Fairness</li>
-    
-    <li class="interest">Privacy</li>
-    
-  </ul>
-
-      
-  <p class="title">PROGRAMMING SKILLS</p>
-  <ul class="skill-list">
-    
-    <li class="skill">
-      <p class="name">C++</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 90%">
-          <div class="progress-value">90%</div>
-        </div>
-      </div>
-    </li>
-    
-    <li class="skill">
-      <p class="name">Python</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 90%">
-          <div class="progress-value">90%</div>
-        </div>
-      </div>
-    </li>
-    
-    <li class="skill">
-      <p class="name">Java</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 65%">
-          <div class="progress-value">65%</div>
-        </div>
-      </div>
-    </li>
-    
-    <li class="skill">
-      <p class="name">C</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 60%">
-          <div class="progress-value">60%</div>
-        </div>
-      </div>
-    </li>
-    
-    <li class="skill">
-      <p class="name">R</p>
-      <div class="progress">
-        <div class="progress-bar" style="width: 55%">
-          <div class="progress-value">55%</div>
-        </div>
-      </div>
-    </li>
-    
-  </ul>
-
-    </article>
-  </section>
-
-  <hr>
-
-  <section id="recentpubs">
-  <div class="recentpubs-wrap">
-    <p class="title">RECENT PUBLICATIONS</p>
-    [<a class="btn" href="/publications" title="Publications">All Publications</a>]
-    <ol class="bibliography"><li><!-- Entry bib key -->
-<div id="aglin2022learningbis">
-  
-  <!-- Title -->
-  <div class="title">Learning Optimal Decision Trees Under Constraints</div>
-  <!-- Author -->
-  <div class="author">
-          <em><b>Aglin, Gaël</b></em>
-  </div>
-
-  <!-- Journal/Book title and date -->
-  
-  <div class="third-line">
-    In PhD Thesis, 2022
-  </div>
-</div></li>
-<li><!-- Entry bib key -->
-<div id="aglin2022learning">
-  
-  <!-- Title -->
-  <div class="title">Learning Optimal Decision Trees Under Memory Constraints</div>
-  <!-- Author -->
-  <div class="author">
-            <em><b>Aglin, Gaël</b></em>,&nbsp;Nijssen, Siegfried,&nbsp;and Schaus, Pierre
-  </div>
-
-  <!-- Journal/Book title and date -->
-  
-  <div class="third-line">
-    In European Conference on Machine Learning and Knowledge Discovery in Databases, pp. 599–616, 2022
-  </div>
-</div></li>
-<li><!-- Entry bib key -->
-<div id="aglin2021assessing">
-  
-  <!-- Title -->
-  <div class="title">Assessing Optimal Forests of Decision Trees</div>
-  <!-- Author -->
-  <div class="author">
-            <em><b>Aglin, Gaël</b></em>,&nbsp;Nijssen, Siegfried,&nbsp;and Schaus, Pierre
-  </div>
-
-  <!-- Journal/Book title and date -->
-  
-  <div class="third-line">
-    In 2021 IEEE 33rd International Conference on Tools with Artificial Intelligence (ICTAI), pp. 32–39, 2021
-  </div>
-</div></li></ol>
-  </div>
-</section>
-</div>
-
-<!-- Footer -->
-<footer>
-  <div class="footer">
-    Copyright © 2023
-    <!-- <a href=""></a>.
-    Powered by Jekyll with
-    <a href="https://github.com/chrjabs/Grape-Academic-Theme">Grape Academic Theme</a>. -->
-  </div>
-</footer>
-
-  </div>
+  <script src="/app.js" defer></script>
 </body>
-
 </html>
