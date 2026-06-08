@@ -9,6 +9,29 @@
   var yr = document.querySelector("[data-year]");
   if (yr) yr.textContent = String(new Date().getFullYear());
 
+  /* ---- live stats ------------------------------------------------------ */
+  /* Numbers come from data/stats.json, refreshed daily by a GitHub Action
+     (Google Scholar via SerpApi + GitHub API). The HTML ships with the last
+     known values, so a failed fetch or no-JS just keeps those. */
+  (function () {
+    var hooks = document.querySelectorAll("[data-stat]");
+    if (!hooks.length) return;
+    fetch("/data/stats.json", { cache: "no-cache" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data) return;
+        hooks.forEach(function (el) {
+          var value = el.getAttribute("data-stat").split(".").reduce(function (obj, key) {
+            return obj == null ? obj : obj[key];
+          }, data);
+          if (value === null || value === undefined || value === "") return;
+          el.textContent =
+            typeof value === "number" ? value.toLocaleString("en-US") : String(value);
+        });
+      })
+      .catch(function () {});
+  })();
+
   /* ---- sticky header scrolled state ------------------------------------ */
   var head = document.querySelector(".site-head");
   if (head) {
