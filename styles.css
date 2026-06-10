@@ -643,7 +643,7 @@ h1, h2, h3, h4 {
 /* ----- Projects --------------------------------------------------------- */
 .projects { display: grid; gap: 1.5rem; }
 @media (min-width: 820px) {
-  .projects { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .projects { grid-template-columns: repeat(2, 1fr); }
 }
 .project {
   position: relative;
