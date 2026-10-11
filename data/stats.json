@@ -1,10 +1,10 @@
 {
   "scholar": {
-    "citations": 337,
+    "citations": 338,
     "hIndex": 5
   },
   "papers": {
-    "aaai2020": 252,
+    "aaai2020": 253,
     "ijcai2021": 55
   },
   "pydl85": {
@@ -12,5 +12,5 @@
     "commits": 634,
     "stars": 70
   },
-  "updatedAt": "2026-10-10"
+  "updatedAt": "2026-10-11"
 }
